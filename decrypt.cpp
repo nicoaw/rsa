@@ -14,7 +14,13 @@ int main(int argc, char* argv[])
 	long long p = atoi(argv[2]);
 	long long q = atoi(argv[3]);
 	long long d = inverse(e, (p - 1) * (q - 1));
-	
+
+	if((e * d) % ((p - 1) * (q - 1)) != 1)
+	{
+		cerr << "No positive inverse for e" << endl;
+		return -1;
+	}
+
 	ifstream cyphertext(argv[4]);
 	istream_iterator<string> first{cyphertext}, last;
 	ostream_iterator<char> result{cout};

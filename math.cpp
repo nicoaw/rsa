@@ -43,17 +43,3 @@ long long inverse(long long a, long long n)
 
 	return t;
 }
-
-long long gcd(long long a, long long b)
-{
-	do
-	{
-		long long c = b;
-		b = a % b;
-
-		a = c;
-	}
-	while(b != 0);
-
-	return a;
-}
