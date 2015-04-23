@@ -24,10 +24,11 @@ int main(int argc, char* argv[])
 		else if(isalpha(m))
 			return to_string(powmod(tolower(m) - 'a' + 1, e, pq));
 		else
-			return string(1, m);
+			return "";
 	};
 
 	transform(first, last, result, encrypt);
+	cout << endl;
 
 	return 0;
 }
