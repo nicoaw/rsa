@@ -1,4 +1,4 @@
-#include "math.hpp"
+#include "Math.hpp"
 #include <algorithm>
 #include <cassert>
 #include <iostream>
