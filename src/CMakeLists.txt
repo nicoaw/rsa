@@ -4,15 +4,13 @@ project(RSA)
 
 list(APPEND CMAKE_CXX_FLAGS "-std=c++1y")
 
-set(ENCRYPT_SOURCES
-	Encrypt.cpp
-	Math.cpp
-	Math.hpp)
+set(RSA_SOURCES
+	Crypt.cpp
+	Crypt.hpp
+	main.cpp)
 
-set(DECRYPT_SOURCES
-	Decrypt.cpp
-	Math.cpp
-	Math.hpp)
+set(RSA_DEPS
+	boost_program_options)
 
-add_executable(encrypt ${ENCRYPT_SOURCES})
-add_executable(decrypt ${DECRYPT_SOURCES})
+add_executable(rsa ${RSA_SOURCES})
+target_link_libraries(rsa ${RSA_DEPS})
